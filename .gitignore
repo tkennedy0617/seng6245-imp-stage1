@@ -1,0 +1,16 @@
+# eclipse stuff
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+**/*.rvm
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+.DS_Store
