@@ -3,6 +3,7 @@ package edu.ecu.cs.sle.imp.console;
 import java.util.Scanner;
 
 import edu.ecu.cs.sle.imp.interpreter.Interpreter;
+import edu.ecu.cs.sle.imp.value.IntegerValue;
 
 public class Console {
 
@@ -24,7 +25,8 @@ public class Console {
 			if (cmd.trim().equalsIgnoreCase("#quit")) {
 				break;
 			}
-			interpreter.interpret(cmd);
+			IntegerValue iv = interpreter.interpret(cmd);
+			System.out.println("result = " + iv.getIntValue());
 		}
 		
 		System.out.println("Exiting...");

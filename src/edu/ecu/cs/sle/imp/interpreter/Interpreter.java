@@ -6,11 +6,12 @@ import edu.ecu.cs.sle.imp.value.IntegerValue;
 
 public class Interpreter {
 
-	public void interpret(String cmd) {
+	public IntegerValue interpret(String cmd) {
 		Expression expr = ParserUtil.parseExpression(cmd);
 		if (expr != null) {
 			IntegerValue iv = expr.interpret();
-			System.out.println("result = " + iv.getIntValue());
+			return iv;
 		}
+		return new IntegerValue(0); // NOTE: This is a bad idea, we will revisit this...
 	}
 }
